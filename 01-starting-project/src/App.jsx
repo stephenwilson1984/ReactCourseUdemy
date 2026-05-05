@@ -4,10 +4,11 @@ import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+  let tabContent = 'Please click a button.';
   
   function handleOnSelect(selectedButton) {
     // selectedButton => 'components', 'jsx', 'props', 'state'
-    console.log(selectedButton + " clicked!");
+    tabContent = selectedButton;
   }
 
   return (
@@ -34,7 +35,7 @@ function App() {
             <TabButton onSelect={() => handleOnSelect("Props")}>Props</TabButton>
             <TabButton onSelect={() => handleOnSelect("State")}>State</TabButton>
           </menu>
-
+          { tabContent }
         </section>
       </main>
     </div>
