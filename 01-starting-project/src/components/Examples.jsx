@@ -15,16 +15,16 @@ export default function Examples() {
             <menu>
                 <TabButton
                     isSelected={selectedTopic === 'components'}
-                    onSelect={() => handleOnSelect("components")}>Components</TabButton>
+                    onClick={() => handleOnSelect("components")}>Components</TabButton>
                 <TabButton
                     isSelected={selectedTopic === 'jsx'}
-                    onSelect={() => handleOnSelect("jsx")}>JSX</TabButton>
+                    onClick={() => handleOnSelect("jsx")}>JSX</TabButton>
                 <TabButton
                     isSelected={selectedTopic === 'props'}
-                    onSelect={() => handleOnSelect("props")}>Props</TabButton>
+                    onClick={() => handleOnSelect("props")}>Props</TabButton>
                 <TabButton
                     isSelected={selectedTopic === 'state'}
-                    onSelect={() => handleOnSelect("state")}>State</TabButton>
+                    onClick={() => handleOnSelect("state")}>State</TabButton>
             </menu>
             {!selectedTopic && <p>Please select a topic.</p>}
             {selectedTopic && <div id="tab-content">
